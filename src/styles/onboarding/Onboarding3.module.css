@@ -1,0 +1,287 @@
+.pageContainer {
+  position: relative;
+  height: 100vh; /* 전체 화면 높이 */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 825px;      /* 이 컨테이너 안에서만 고정되도록 */
+  max-height: 800%;  /* 부모 기준에서 제한 */
+  overflow: hidden;
+  background-color: white;
+}
+.scrollArea {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0px;
+  box-sizing: border-box;
+  padding-bottom: 100px;
+}
+
+.scrollContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.bottomBar {
+  position: sticky; /* 또는 fixed 가능 */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  background-color: white;
+  border-top: 1px solid #eee;
+  z-index: 10;
+}
+
+/* 버튼 스타일 예시 */
+.heartIcon{
+width: 25px;
+height: 25px;
+flex-shrink: 0;
+aspect-ratio: 1/1;
+}
+
+.iconButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 10px;
+ width: 51px;
+height: 51px;
+flex-shrink: 0;
+}
+
+.alertButton {
+  flex: 1;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-weight: 400;
+}
+
+.buyButton {
+  flex: 1;
+  padding: 10px;
+  background: #ffefb5;
+  border: none;
+  border-radius: 10px;
+  font-weight: 400;
+}
+
+
+
+
+.topBar {
+  position: sticky;      /* 또는 fixed 가능 (상황에 따라) */
+  top: 0;
+  z-index: 100;
+  height: 69px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+}
+
+.rightIcons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+
+.mainImage {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin: 0 ;
+  
+}
+
+.brandRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+}
+
+.brandLogo {
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+.brandName {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.productInfo {
+  padding: 8px 16px;
+}
+
+.nameRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.productName {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 8px;
+}
+.shareIcon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.originalPrice {
+  font-size: 13px;
+  color: #aaa;
+  text-decoration: line-through;
+}
+.badgeRow {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+  width: 170px;
+  height: 20px;
+}
+
+.badgeRed {
+  background-color: #e66d68;
+  color: white;
+  font-size: 8px;
+  padding: 2px 7px 2px 4px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  gap: 4px;
+  line-height: 1.2;
+}
+
+.badgeIcon {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+
+.badgeBrown {
+  background-color: #8A5B30;
+  color: #ffffff;
+  font-size: 8px;
+  padding: 2px 7px 2px 4px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  gap: 4px;
+  line-height: 1.2;
+}
+.finalPrice {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+.discount {
+  font-size: 13px;
+  color: #E66D68;
+  font-weight: 700;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  padding-top: 6px;
+}
+
+.priceRatingRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top:3px;
+  
+}
+.reviewCount {
+  font-weight: 400;
+  color: #CAC8C8;
+  margin-left: 2px;
+ 
+
+}
+
+.starIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.tabBar {
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid #eee;
+  margin-top: 16px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.active {
+  color: #111;
+  font-weight: 700;
+}
+
+.cursor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 33.33%;
+  height: 2px;
+  background-color: #111;
+  transition: left 0.3s ease;
+}

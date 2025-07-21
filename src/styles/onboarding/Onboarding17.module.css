@@ -1,0 +1,226 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+
+* {
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+/* ✅ 전체 wrapper 구조 */
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.scrollArea {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* ✅ container 내부에 하단바 포함 */
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px 120px; /* 좌우 여백 30px 고정 */
+  padding-bottom: 120px; /* 하단 바와 겹치지 않도록 */
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+
+
+.centerButton {
+  width: 64px;
+  height: 64px;
+  background-color: rgb(243, 243, 243);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -32px;
+  z-index: 10;
+}
+.centerButton img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
+.title {
+color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 130%; /* 23.4px */
+letter-spacing: -0.36px;
+padding-left: 40px;
+}
+
+/* ✅ UI 콘텐츠 스타일은 그대로 유지 */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 10;
+  padding: 0 4px;
+}
+.backIcon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin-left: -14px; /* ✅ 왼쪽으로 더 붙이기 */
+}
+.rightIcons {
+  display: flex;
+  gap: 16px;
+}
+.icon {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.tabWrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  border-radius: 100px;
+  padding: 3px;
+  margin: 20px 4px;
+}
+
+.tab {
+  flex: 1;
+  padding: 8px 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 100px;
+  background-color: transparent;
+  color: #000000;
+  border: none;
+}
+
+.active {
+  background-color: #ffffff;
+  color: #000;
+  font-weight: 600;
+}
+
+
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.thumb {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #ddd;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+
+.brand {
+  font-size: 10px;
+  color: #777;
+}
+
+.name {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.discount {
+  font-size: 10px;
+  color: #FF5A5A;
+  font-weight: 600;
+}
+
+.review {
+  font-size: 10px;
+  color: #888;
+  margin: 2px 0;
+}
+
+.alertButtons {
+  display: flex;
+  gap: 5px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+  
+}
+
+.blackBtn, .grayBtn {
+  flex: 1;
+  
+  height: 20px;
+  font-size: 8px;
+  border-radius: 20px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  
+}
+
+.blackBtn {
+  background: #FFEBAF;
+  color: #000000;
+  border: none;
+}
+
+.grayBtn {
+  background: #f3f3f3;
+  border: 1px solid #000;
+  color: #000;
+}
+
+/* 알림 아이콘 (벨) */
+.alertIcon {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 18px;
+  height: 18px;
+}

@@ -1,0 +1,240 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+
+* {
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+/* ✅ 전체 wrapper 구조 */
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.scrollArea {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* ✅ container 내부에 하단바 포함 */
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px 120px; /* 좌우 여백 30px 고정 */
+  padding-bottom: 120px; /* 하단 바와 겹치지 않도록 */
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* ✅ 콘텐츠 끝에 하단 고정처럼 붙도록 */
+.bottomNav {
+  margin-top: auto;
+  height: 64px;
+  background-color: white;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottomNav img {
+  width: 24px;
+  height: 24px;
+}
+
+.centerButton {
+  width: 64px;
+  height: 64px;
+  background-color: rgb(243, 243, 243);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -32px;
+  z-index: 10;
+}
+.centerButton img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
+
+/* ✅ UI 콘텐츠 스타일은 그대로 유지 */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 10;
+  padding: 0 4px;
+}
+.backIcon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin-left: -14px; /* ✅ 왼쪽으로 더 붙이기 */
+}
+.rightIcons {
+  display: flex;
+  gap: 16px;
+}
+.icon {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+.profileSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  gap: 12px;
+}
+
+
+.profileImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #eee;
+  margin-right: 12px;
+}
+
+.profileRow {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* 이름과 버튼 사이 여백 */
+  flex: 1;
+}
+.profileInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.profileName {
+  font-weight: bold;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.editBtn {
+  font-size: 10px;
+  width: 60px;
+  height: 20px;
+  padding: 0;
+  border: 1px solid #000;
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  margin-left: auto; /* ✅ 오른쪽으로 밀기 */
+}
+.recommendBox {
+    background-color: #ffffff;     /* 박스 내부 흰색 */
+  border: 1px solid #e6e6e6;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  margin-bottom: 2px;
+  height: 50px;
+  padding-top: 15px;
+}
+.recommendTitle {
+color: #000;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 18px; /* 157.143% */
+
+}
+
+.recommendDesc {
+  font-size: 11px;
+  color: #555;
+}
+.recommendBox strong {
+  display: block;
+  margin-bottom: 4px;
+}
+.sectionBox {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 10px; /* ← 여기 20px로 확실히 변경 */
+}
+.sectionTitle {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #000;
+}
+.sectionList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section {
+  margin-bottom: 8px; /* ✅ 원하는 만큼만 여백 유지 */
+}
+.section h3 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.section ul {
+  list-style: none;
+  padding: 0;
+}
+.sectionList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 14px;
+}
+
+
+
+.centerDesc,
+.centerTime {
+  font-size: 12px;
+  color: #555;
+  margin: 8px 0;
+}
+.bottomButtons {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+.yellowBtn {
+  flex: 1;
+  background-color: #ffe59e;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+}
+.logoutBtn {
+  width: 100%;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 12px;
+  font-weight: bold;
+  margin-top: 12px;
+  border-radius: 6px;
+}

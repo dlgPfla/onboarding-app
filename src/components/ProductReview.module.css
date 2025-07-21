@@ -1,0 +1,38 @@
+.reviewContainer {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.reviewSubTitle {
+  font-size: 10px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.ratingImage{
+margin-left: 15px;
+
+}
+
+
+
+
+.reviewButton {
+  width: 342px;
+  height: 40px;
+  border-radius: 5px;
+  background: #FFF9E7;
+  color: #000;
+  font-weight: 400;
+  font-size: 12px;
+  font-family: 'Pretendard', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 34px;
+}
+.reviewButton:hover {
+  background: #fff3c5;
+}
