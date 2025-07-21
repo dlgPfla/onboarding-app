@@ -13,7 +13,7 @@ function Onboarding12() {
 
   const [currentBanner, setCurrentBanner] = useState(0);
   const banners = [
-    '/banner1.png',
+    '/ad5d76d9c3383133d1f77a7f1d04161d55c6bc43.jpg',
     '/banner2.png',
     '/banner3.png',
     '/banner4.png',
@@ -26,20 +26,20 @@ function Onboarding12() {
 
   const [currentCategoryPage, setCurrentCategoryPage] = useState(0);
   const categories = [
-    { label: '기저귀/배변용품', icon: '/Baby Medium Light Skin Tone Streamline Twemoji Emoji.svg' },
-    { label: '젖병/수유', icon: '/Baby Bottle Streamline Twemoji Emoji.svg' },
-    { label: '이유식/간식', icon: '/Lollipop Streamline Twemoji Emoji.svg' },
-    { label: '스킨케어/목욕', icon: '/Lotion Bottle Streamline Twemoji Emoji.svg' },
-    { label: '놀이/발달', icon: '/Teddy Bear Streamline Twemoji Emoji.svg' },
-    { label: '유모차/카시트', icon: '/Sport Utility Vehicle Streamline Twemoji Emoji.svg' },
-    { label: '가구/침구', icon: '/Bed Streamline Twemoji Emoji.svg' },
-    { label: '도서/학습', icon: '/Books Streamline Twemoji Emoji.svg' },
-    { label: '외출소품', icon: '/Handbag Streamline Twemoji Emoji.svg' },
-    { label: '전자/소형가전', icon: '/Electric Plug Streamline Twemoji Emoji.svg' },
-    { label: '세탁/위생', icon: '/Bubbles Streamline Twemoji Emoji.svg' },
-    { label: '안전용품', icon: '/Unlocked Streamline Twemoji Emoji.svg' },
-    { label: '생활/정리용품', icon: '/File Cabinet Streamline Twemoji Emoji.svg' },
-    { label: '임부용품', icon: '/Pregnant Woman Light Skin Tone Streamline Twemoji Emoji.svg' },
+    { label: '기저귀/배변용품', icon: '/e6c22a4d1e7f64caf437050988ec71411be6d4a2.png' },
+{ label: '젖병/수유', icon: '/b97798e22532ef3c7724528b88f62433c0b148a4.png' },
+{ label: '이유식/간식', icon: '/9e248512d6adef48fa9a2c6efa8ff4e86a53b722.png' },
+{ label: '스킨케어/목욕', icon: '/Lotion Bottle Streamline Twemoji Emoji.svg' },
+{ label: '놀이/발달', icon: '/2fb178267fbe19c6fddee8cccc33754658ac6307.png' },
+{ label: '유모차/카시트', icon: '/Sport Utility Vehicle Streamline Twemoji Emoji.svg' },
+{ label: '가구/침구', icon: '/72a15f9ab5f9eed439ddc07206e91b9b1553d873.png' },
+{ label: '도서/학습', icon: '/8b5c353ecdb5b6d84744d77ccc3e07ed107936ea.png' },
+{ label: '외출소품', icon: '/9d996196cfcbb09af2c00a9d07cf0f232c678b0a.png' },
+{ label: '전자/소형가전', icon: '/777c553e1039cc831c0f40f3f46d9ecb213e62ac.png' },
+{ label: '세탁/위생', icon: '/bbde56bb0e32e2373127faa37b163e5d5ffa0e25.png' },
+{ label: '안전용품', icon: '/a4da9b265aa39417aee271f5a1c52132e6d33fe3.png' },
+{ label: '생활/정리용품', icon: '/4684bf6e83e456d9a15aa84e1a20577b8627fe4e.png' },
+{ label: '임부용품', icon: '/055aa8deb388a0704250cbb6ffc8a82c2f3ee0bb.png' },
   ];
 
   const pages = Array.from({ length: Math.ceil(categories.length / 8) }, (_, i) =>
@@ -77,18 +77,17 @@ function Onboarding12() {
             </button>
           ))}
         </div>
-
-          <div className={styles.sliderContainer} >
-          <img src={banners[currentBanner]} className={styles.bannerImage} alt="배너" />
-          <div className={styles.arrowContainer} >
-            <span className={styles.arrowText}>
-              {currentBanner + 1} / {banners.length}
-            </span>
-            <img src="/arrow-icon.svg" alt="다음"
-            className={styles.arrowButton} />
-          </div>
-        </div>
-
+<main className={styles.main}>
+  <div className={styles.sliderContainer}>
+    <img src={banners[currentBanner]} className={styles.bannerImage} alt="배너" />
+    <div className={styles.arrowContainer}>
+      <span className={styles.arrowText}>
+        {currentBanner + 1} / {banners.length}
+      </span>
+      <img src="/arrow-icon.svg" alt="다음" className={styles.arrowButton} />
+    </div>
+  </div>
+  </main>
         <div className={styles.categoryWrapper}>
           <div className={`${styles.categoryPages} ${styles[`page${currentCategoryPage}`]}`}>
             {pages.map((page, pageIndex) => (
@@ -139,11 +138,12 @@ function Onboarding12() {
       </div>
 
       {/* 화살표 */}
-      <img
-        src="/ep_arrow-left-bold (1).svg"
-        alt="화살표"
-        className={styles.iconBtn}
-      />
+<img
+  src="/ep_arrow-left-bold (1).svg"
+  alt="화살표"
+  className={styles.iconBtn}
+  onClick={() => navigate('/onboarding/19')}
+/>
     </div>
   </div>
 </div>
@@ -484,7 +484,7 @@ function Onboarding12() {
         <img src="/tabler_home.svg" alt="홈" />
         <img src="/icon-park-outline_hamburger-button.svg" alt="메뉴" />
         <div className={styles.centerButton}>
-          <img src="/mdi_google-lens.svg" alt="렌즈" />
+          <img src="/mdi_google-lens.svg" className={styles.icon} />
         </div>
         <img src="/solar_sale-outline.svg" alt="세일" onClick= {() => navigate('/onboarding/17')} />
         <img

@@ -120,7 +120,7 @@ padding-left: 40px;
 .cardGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 12px;
   margin-top: 16px;
 }
 
@@ -128,7 +128,7 @@ padding-left: 40px;
   background-color: #fff;
   border: 1px solid #eee;
   border-radius: 12px;
-  padding: 12px;
+  padding: 6px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -154,8 +154,8 @@ padding-left: 40px;
 }
 
 .name {
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 500;
   margin-bottom: 4px;
 }
 
@@ -172,7 +172,7 @@ padding-left: 40px;
 
 .discount {
   font-size: 10px;
-  color: #FF5A5A;
+  color: #E66D68;
   font-weight: 600;
 }
 
@@ -184,37 +184,38 @@ padding-left: 40px;
 
 .alertButtons {
   display: flex;
-  gap: 5px;
-  margin-top: 4px;
-  flex-wrap: wrap;
-  
+  flex-direction: row;
+  gap: 4px;
+  margin-top: 6px;
 }
 
-.blackBtn, .grayBtn {
-  flex: 1;
-  
-  height: 20px;
-  font-size: 8px;
-  border-radius: 20px;
-  font-weight: 400;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+
+.grayBtn,
+.yellowBtn {
+  font-size: 9px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 999px;
+  padding: 4px 5px;
   line-height: 1;
-  
-}
-
-.blackBtn {
-  background: #FFEBAF;
-  color: #000000;
-  border: none;
+  min-width: fit-content;
+  height: auto;
 }
 
 .grayBtn {
-  background: #f3f3f3;
-  border: 1px solid #000;
-  color: #000;
+  background-color: #fff;
+  color: #555;
+  border: 1px solid #D9D9D9;
 }
+
+.yellowBtn {
+  background-color: #FFEBAF;
+  color: #0F0F0F;
+  border: 1px solid #FFEBAF;
+}
+
 
 /* 알림 아이콘 (벨) */
 .alertIcon {
@@ -223,4 +224,50 @@ padding-left: 40px;
   top: 12px;
   width: 18px;
   height: 18px;
+}
+.sortRow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: -11px;
+  gap: 6px;
+}
+
+.sortLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: #9A9A9A;
+}
+
+.smallBellIcon {
+  width: 10px;
+  height: 10px;
+}
+
+/* 카드 종 아이콘 */
+.card {
+  position: relative; /* 필수 */
+}
+
+.cardBellWrapper {
+  position: absolute;
+  top:14px;
+  right: 8px;
+  left: 128px;
+  width: 19px;
+  height: 19px;
+}
+
+.cardBellBg {
+  width: 15px;
+  height: 15px;
+  margin-left: 4px;
+}
+
+.cardBellIcon {
+  position: absolute;
+  top: 3px;
+  left: 5.5px;
+  width: 12px;
+  height: 12px;
 }

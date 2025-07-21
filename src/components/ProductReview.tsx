@@ -15,7 +15,7 @@ const ProductReview = () => {
 
       {/* 후기 요약 영역 이미지로 대체 */}
       <img
-        src="/Frame 427319135.svg"
+        src="/Frame 427319135 (2).svg"
         alt="후기 요약 이미지"
         className={styles.reviewSummaryImage}
       />

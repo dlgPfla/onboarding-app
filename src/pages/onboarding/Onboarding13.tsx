@@ -30,7 +30,7 @@ function Onboarding13() {
           <div className={styles.profileSection}>
   <div className={styles.profileImg} />
   <div className={styles.profileRow}>
-    <div className={styles.profileName}>6개월 민하 엄마</div>
+    <div className={styles.profileName}>6개월 민하 </div>
     <button className={styles.editBtn}>프로필 편집</button>
   </div>
 </div>

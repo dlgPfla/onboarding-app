@@ -1,0 +1,115 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+
+* {
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* min-height ❌ */
+  max-width: 390px;
+  margin: 0 auto;
+  background-color: #fff;
+  font-family: 'Pretendard', sans-serif;
+}
+.content {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 100px; /* 하단바 가림 방지 */
+  box-sizing: border-box;
+}
+.profileHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  position: relative;
+}
+
+.profileImage {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profileName {
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 12px;
+  flex: 1;
+}
+
+.iconGroup {
+  display: flex;
+  gap: 21px;
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  align-items: center;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  padding-right: 24px;
+  cursor: pointer;
+}
+
+/* 탭 메뉴 */
+.tabMenu {
+  display: flex;
+  width: 100%;
+  height: 41px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabButton {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.tabButton.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 31px;
+  height: 2px;
+  background-color: #000;
+  border-radius: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.kitImage {
+  width: 412px; /* 또는 적절히 402px 등으로 지정 */
+  max-width: 402px;
+  height: auto;
+  margin-top: 4px;
+  border-radius: 12px;
+}
+.divider {
+  height: 3px;
+  background-color: #f3f3f3;
+  width: 430%;
+  max-width: 430px;
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollWrapper {
+  -ms-overflow-style: none; /* IE, Edge */
+  scrollbar-width: none;    /* Firefox */
+}

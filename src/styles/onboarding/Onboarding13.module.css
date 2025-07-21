@@ -223,18 +223,21 @@ line-height: 18px; /* 157.143% */
 }
 .yellowBtn {
   flex: 1;
-  background-color: #ffe59e;
+  background-color: #FFF9E7;
   border: none;
-  padding: 12px;
-  font-weight: bold;
+  padding: 8px;
+  font-weight: 400;
   border-radius: 6px;
+  font-family: Pretendard;
 }
 .logoutBtn {
   width: 100%;
-  border: 1px solid #000;
+  border: 1px solid #E5E5E5;
   background-color: #fff;
-  padding: 12px;
-  font-weight: bold;
+  padding: 8px;
+  font-weight: 400;
   margin-top: 12px;
   border-radius: 6px;
+  font-family: Pretendard;
+  margin-bottom: 25px;
 }

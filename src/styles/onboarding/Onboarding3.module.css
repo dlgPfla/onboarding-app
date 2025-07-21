@@ -67,7 +67,7 @@ flex-shrink: 0;
 
 .alertButton {
   flex: 1;
-  padding: 10px;
+  padding: 5px 5px;
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -76,7 +76,7 @@ flex-shrink: 0;
 
 .buyButton {
   flex: 1;
-  padding: 10px;
+  padding: 5px 5px;
   background: #ffefb5;
   border: none;
   border-radius: 10px;

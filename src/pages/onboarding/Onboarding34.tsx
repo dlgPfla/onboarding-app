@@ -2,23 +2,26 @@ import React, { useState } from 'react';
 import { useUserStore } from '../../stores/useUserStore';
 import { useNavigate } from 'react-router-dom';
 import styles from '../../styles/onboarding/Onboarding34.module.css';
+import FixProductSection from '../../components/FixProductSection'; // 경로는 실제 구조에 따라 조정
+
 
 const categories = [
-  { label: '기저귀/배변용품', icon: '/Baby Medium Light Skin Tone Streamline Twemoji Emoji.svg', tags: ['물티슈', '기저귀', '배변훈련팬티', '기저귀 휴지통'] },
-  { label: '젖병/수유', icon: '/Baby Bottle Streamline Twemoji Emoji.svg', tags: [] },
-  { label: '이유식/간식', icon: '/Lollipop Streamline Twemoji Emoji.svg', tags: [] },
+  { label: '기저귀/배변용품', icon: '/e6c22a4d1e7f64caf437050988ec71411be6d4a2.png', tags: ['물티슈', '기저귀', '배변훈련팬티', '기저귀 휴지통'] },
+  { label: '젖병/수유', icon: '/b97798e22532ef3c7724528b88f62433c0b148a4.png', tags: [] },
+  { label: '이유식/간식', icon: '/9e248512d6adef48fa9a2c6efa8ff4e86a53b722.png', tags: [] },
   { label: '스킨케어/목욕', icon: '/Lotion Bottle Streamline Twemoji Emoji.svg', tags: [] },
-  { label: '놀이/발달', icon: '/Teddy Bear Streamline Twemoji Emoji.svg', tags: [] },
+  { label: '놀이/발달', icon: '/2fb178267fbe19c6fddee8cccc33754658ac6307.png', tags: [] },
   { label: '유모차/카시트', icon: '/Sport Utility Vehicle Streamline Twemoji Emoji.svg', tags: [] },
-  { label: '가구/침구', icon: '/Bed Streamline Twemoji Emoji.svg', tags: [] },
-  { label: '도서/학습', icon: '/Books Streamline Twemoji Emoji.svg', tags: [] },
-  { label: '외출소품', icon: '/Handbag Streamline Twemoji Emoji.svg', tags: [] },
-  { label: '전자/소형가전', icon: '/Electric Plug Streamline Twemoji Emoji.svg', tags: [] },
-  { label: '세탁/위생', icon: '/Bubbles Streamline Twemoji Emoji.svg', tags: [] },
-  { label: '안전용품', icon: '/Unlocked Streamline Twemoji Emoji.svg', tags: [] },
-  { label: '생활/정리용품', icon: '/File Cabinet Streamline Twemoji Emoji.svg', tags: [] },
-  { label: '임부용품', icon: '/Pregnant Woman Light Skin Tone Streamline Twemoji Emoji.svg', tags: [] },
-];
+  { label: '가구/침구', icon: '/72a15f9ab5f9eed439ddc07206e91b9b1553d873.png', tags: [] },
+  { label: '도서/학습', icon: '/8b5c353ecdb5b6d84744d77ccc3e07ed107936ea.png', tags: [] },
+  { label: '외출소품', icon: '/9d996196cfcbb09af2c00a9d07cf0f232c678b0a.png', tags: [] },
+  { label: '전자/소형가전', icon: '/777c553e1039cc831c0f40f3f46d9ecb213e62ac.png', tags: [] },
+  { label: '세탁/위생', icon: '/bbde56bb0e32e2373127faa37b163e5d5ffa0e25.png', tags: [] },
+  { label: '안전용품', icon: '/a4da9b265aa39417aee271f5a1c52132e6d33fe3.png', tags: [] },
+  { label: '생활/정리용품', icon: '/4684bf6e83e456d9a15aa84e1a20577b8627fe4e.png', tags: [] },
+  { label: '임부용품', icon: '/055aa8deb388a0704250cbb6ffc8a82c2f3ee0bb.png', tags: [] }
+]
+;
 
 function Onboarding34() {
   const name = useUserStore((state) => state.name);
@@ -51,6 +54,7 @@ function Onboarding34() {
     setSelectedCategory((prev) => (prev === label ? null : label));
   };
 
+  const [showFixTab, setShowFixTab] = useState(false);
   return (
     <div className={styles.container}>
       <div className={styles.scrollWrapper}>
@@ -100,23 +104,34 @@ function Onboarding34() {
               <input type="text" placeholder="품목 검색" className={styles.searchInput} />
               <img src="/basil_search-outline.svg" alt="검색" className={styles.searchIcon} />
             </div>
+<div className={styles.buttonRow}>
+  <button
+    className={`${styles.actionButton} ${showFixTab ? styles.active : ''}`}
+    onClick={() => setShowFixTab(!showFixTab)}
+  >
+    <div className={styles.iconTextWrapper}>
+      <img src="/Vector.svg" className={styles.icon} alt="고정" />
+      <img src="/divider.png" className={styles.divider} alt="구분선" />
+      <span className={styles.buttonText}>상품 고정하기</span>
+    </div>
+  </button>
+{showFixTab && (
+  <FixProductSection
+    show={showFixTab}
+    onClose={() => setShowFixTab(false)}
+  />
+)}
+  <button className={styles.actionButton}>
+    <div className={styles.iconTextWrapper}>
+      <img src="/wish button.svg" className={styles.icon} alt="찜" />
+      <img src="/divider.png" className={styles.divider} alt="구분선" />
+      <span className={styles.buttonText}>찜한 상품 불러오기</span>
+    </div>
+  </button>
+</div>
 
-            <div className={styles.buttonRow}>
-              <button className={styles.actionButton}>
-                <div className={styles.iconTextWrapper}>
-                  <img src="/Vector.svg" className={styles.icon} alt="고정" />
-                  <img src="/divider.png" className={styles.divider} alt="구분선" />
-                  <span className={styles.buttonText}>상품 고정하기</span>
-                </div>
-              </button>
-              <button className={styles.actionButton}>
-                <div className={styles.iconTextWrapper}>
-                  <img src="/wish button.svg" className={styles.icon} alt="찜" />
-                  <img src="/divider.png" className={styles.divider} alt="구분선" />
-                  <span className={styles.buttonText}>찜한 상품 불러오기</span>
-                </div>
-              </button>
-            </div>
+
+
 
             <div className={styles.categoryGrid}>
               {categories.map((category, index) => {
@@ -158,19 +173,29 @@ function Onboarding34() {
               })}
             </div>
 
-            {selectedTags.length > 0 && (
-              <div className={styles.bottomBarContainer}>
-                <div className={styles.selectedTagsBar}>
-                  {selectedTags.map((tag) => (
-                    <div key={tag} className={styles.selectedTag}>
-                      {tag}
-                      <button className={styles.removeButton} onClick={() => handleTagClick(tag)}>×</button>
-                    </div>
-                  ))}
-                </div>
-                <button className={styles.recommendBtn}>예산에 맞게 구성 추천받기</button>
-              </div>
-            )}
+{selectedTags.length > 0 && (
+  <div className={styles.bottomBarContainer}>
+    <div className={styles.selectedTagsBar}>
+      {selectedTags.map((tag) => (
+        <div key={tag} className={styles.selectedTag}>
+          {tag}
+          <button
+            className={styles.removeButton}
+            onClick={() => handleTagClick(tag)}
+          >
+            ×
+          </button>
+        </div>
+      ))}
+    </div>
+    <button
+      className={styles.recommendBtn}
+      onClick={() => navigate('/onboarding/27')}
+    >
+      예산에 맞게 구성 추천받기
+    </button>
+  </div>
+)}
           </div>
         </div>
       </div>

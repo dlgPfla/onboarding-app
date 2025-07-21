@@ -1,0 +1,48 @@
+.keypadWrapper {
+  background-color: #bdbcbc;
+  width: 100%;
+  padding: 0;
+  
+}
+
+.keypadGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px 6px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: -25px;
+}
+
+.keypadButton {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.zeroButton {
+  grid-column: 2; /* 0 버튼을 가운데로 */
+}
+
+.number {
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+  margin-top: 5px;
+}
+
+.label {
+  font-size: 10px;
+  color: #666;
+  margin-top: 1px;
+}
+
+.deleteIcon {
+  width: 120px;
+  height: 120px;
+}
