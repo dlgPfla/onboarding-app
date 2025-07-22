@@ -75,18 +75,20 @@
 }
 .leftGroup{
     display: flex;
-  gap: 32px;
+  gap: 48px;
   align-items: center;
   z-index: 2;
+  margin-left: -24px;
 }
 
 
 
 .rightGroup {
   display: flex;
-  gap: 32px;
+  gap: 48px;
   align-items: center;
   z-index: 2;
+  margin-right: -24px;
 }
 .centerButton img {
   width: 28px;
