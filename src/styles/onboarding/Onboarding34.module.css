@@ -435,13 +435,14 @@ background: #FBFBFB;
   
   border-radius: 12px;
   padding: 20px 16px;
-  margin: -10px 16px 5px;
+  margin: -40px 16px 5px;
   box-sizing: border-box;
   width: 100%;
+ 
 }
 .recommendBtn {
   width: 100%;
-  height: 48px;
+  height: 38px;
   background-color: #FFEBAF;
   border: none;
   border-radius: 10px;
@@ -449,6 +450,7 @@ background: #FBFBFB;
   font-size: 13px;
   text-align: center;
   cursor: pointer;
+  
 }
 .fullWidthRow {
   grid-column: span 4; /* ✅ 가로 4칸 모두 차지 */
