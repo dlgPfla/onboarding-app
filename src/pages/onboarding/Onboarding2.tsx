@@ -107,7 +107,7 @@ function Onboarding2() {
       <button
   className={styles.submitBtn}
   onClick={() => {
-      // Zustand에 저장
+       // Zustand에 저장
     navigate('/onboarding/25');   // state 없이 이동해도 됨!
   }}
 >

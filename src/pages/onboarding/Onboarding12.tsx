@@ -495,7 +495,7 @@ return (
   </div>
 
   <div className={styles.centerButton}>
-    <img src="/mdi_google-lens.svg" alt="렌즈" onClick={() => navigate('/onboarding/26')} />
+    <img src="/mdi_google-lens.svg" alt="렌즈" onClick={() => navigate('/onboarding/0')} />
   </div>
 </div>
 

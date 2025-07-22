@@ -813,3 +813,26 @@ height: 100px;
   background-color: #fff;
   cursor: pointer;
 }
+
+
+/* 스크롤바 전체 설정 */
+.container::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* 스크롤 트랙 (배경) */
+.container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 스크롤 핸들 (움직이는 부분) */
+.container::-webkit-scrollbar-thumb {
+  background-color: #ccc;  /* 옅은 회색 */
+  border-radius: 4px;
+}
+
+/* Firefox용 */
+.container {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}

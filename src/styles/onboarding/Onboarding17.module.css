@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   padding: 20px 30px 120px; /* 좌우 여백 30px 고정 */
-  padding-bottom: 120px; /* 하단 바와 겹치지 않도록 */
+  padding-bottom: 140px; /* 하단 바와 겹치지 않도록 */
   background-color: #ffffff;
   color: #000000;
 }
@@ -65,7 +65,7 @@ padding-left: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 20px;
+  height: 46px;
   position: sticky;
   top: 0;
   background-color: #ffffff;
@@ -196,11 +196,11 @@ padding-left: 40px;
 .grayBtn,
 .yellowBtn {
   font-size: 9px;
-  font-weight: 500;
+  font-weight: 400;
   white-space: nowrap;
   text-align: center;
   border-radius: 999px;
-  padding: 4px 5px;
+  padding: 3px 4px;
   line-height: 1;
   min-width: fit-content;
   height: auto;
@@ -272,4 +272,25 @@ padding-left: 40px;
   left: 5.5px;
   width: 12px;
   height: 12px;
+}
+/* 스크롤바 전체 스타일 */
+.scrollArea::-webkit-scrollbar {
+  width: 6px; /* 세로 스크롤바 너비 */
+}
+
+/* 스크롤바 트랙 (배경) */
+.scrollArea::-webkit-scrollbar-track {
+  background: transparent; /* 필요하면 #f9f9f9 등으로 설정 가능 */
+}
+
+/* 스크롤바 손잡이 (움직이는 부분) */
+.scrollArea::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* 연한 회색 */
+  border-radius: 4px;
+}
+
+/* Firefox용 (선택 사항) */
+.scrollArea {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
 }

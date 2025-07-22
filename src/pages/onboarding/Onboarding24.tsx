@@ -44,7 +44,7 @@ function Onboarding24() {
       className={styles.floatingBtn}
       onClick={() => navigate('/onboarding/26')}
     >
-      →
+      ,
     </button>
         </div>
       </div>

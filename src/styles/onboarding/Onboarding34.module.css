@@ -460,3 +460,20 @@ background: #FBFBFB;
 
 
 
+.scrollWrapper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollWrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollWrapper::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.scrollWrapper {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
