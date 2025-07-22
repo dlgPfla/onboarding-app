@@ -17,6 +17,7 @@ import Onboarding34 from './pages/onboarding/Onboarding34';
 import Onboarding13 from './pages/onboarding/Onboarding13';
 import Onboarding17 from './pages/onboarding/Onboarding17';
 import Onboarding27 from './pages/onboarding/Onboarding27';
+import Onboarding24 from './pages/onboarding/Onboarding24';
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,7 @@ const router = createBrowserRouter([
 { path: '/onboarding/13', element: <Onboarding13 /> },
 { path: '/onboarding/17', element: <Onboarding17 /> },
 { path: '/onboarding/27', element: <Onboarding27 /> },
+{ path: '/onboarding/24', element: <Onboarding24 /> },
 
     ],
   },

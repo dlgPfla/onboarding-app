@@ -105,11 +105,27 @@
   margin-top: 0px;
   margin-bottom: 3px;
 }
-::-webkit-scrollbar {
-  display: none;
+/* 세로 스크롤만 숨기고, 가로 스크롤은 보이게 */
+.scrollWrapper {
+  overflow-x: auto;   /* 가로 스크롤 활성화 */
+  overflow-y: scroll; /* 세로 스크롤 유지 but 숨길 예정 */
+
+  -ms-overflow-style: none;  /* IE, Edge - 세로 스크롤 숨김 */
+  scrollbar-width: none;     /* Firefox - 세로 스크롤 숨김 */
 }
 
-.scrollWrapper {
-  -ms-overflow-style: none; /* IE, Edge */
-  scrollbar-width: none;    /* Firefox */
+/* 세로 스크롤만 숨기기 위한 Webkit 대응 */
+.scrollWrapper::-webkit-scrollbar:vertical {
+  display: none; /* 세로 스크롤만 숨김 */
+}
+
+/* 가로 스크롤은 보이게 유지 (기본값) */
+.scrollWrapper::-webkit-scrollbar:horizontal {
+  height: 6px;           /* 원하는 높이 */
+  background: #f0f0f0;   /* 배경색 */
+}
+
+.scrollWrapper::-webkit-scrollbar-thumb:horizontal {
+  background: #bbb;       /* 스크롤바 색 */
+  border-radius: 4px;
 }

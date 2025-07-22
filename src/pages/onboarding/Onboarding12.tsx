@@ -54,18 +54,21 @@ function Onboarding12() {
     }
   };
 
-  return (
-    <div className={styles.container}>
-      <div className={styles.content}>
-        <div className={styles.profileHeader}>
-          <img src={profileImage} alt="프로필" className={styles.profileImage} />
-          <span className={styles.profileName}>{name}</span>
-          <div className={styles.iconGroup}>
-            <img src="/meteor-icons_search.svg" alt="검색" />
-            <img src="/wish button.svg" alt="찜" />
-          </div>
+return (
+  <div className={styles.container}>
+    <div className={styles.content}>
+      <div className={styles.profileHeader}>
+        <img
+          src={profileImage || '/profile.png'}
+          alt="프로필"
+          className={styles.profileImage}
+        />
+        <span className={styles.profileName}>6개월차 민하</span> {/* ✅ 수정 */}
+        <div className={styles.iconGroup}>
+          <img src="/meteor-icons_search.svg" alt="검색" />
+          <img src="/wish button.svg" alt="찜" />
         </div>
-
+      </div>
         <div className={styles.tabMenu}>
           {tabs.map((tab) => (
             <button
@@ -478,22 +481,23 @@ function Onboarding12() {
 </div>
 
       </div>
-      
-
-      <div className={styles.bottomNav}>
-        <img src="/tabler_home.svg" alt="홈" />
-        <img src="/icon-park-outline_hamburger-button.svg" alt="메뉴" />
-        <div className={styles.centerButton}>
-          <img src="/mdi_google-lens.svg" className={styles.icon} />
-        </div>
-        <img src="/solar_sale-outline.svg" alt="세일" onClick= {() => navigate('/onboarding/17')} />
-        <img
-  src="/ion_person-outline.svg"
-  alt="마이페이지"
-  onClick={() => navigate('/onboarding/13')}
-/>
-      </div>
+<div className={styles.bottomNav}>
+  
+    <div className={styles.leftGroup}>
+      <img src="/tabler_home.svg" alt="홈" onClick={() => navigate('/onboarding/12')} />
+      <img src="/icon-park-outline_hamburger-button.svg" alt="메뉴" onClick={() => navigate('/onboarding/24')} />
     </div>
+
+    <div className={styles.rightGroup}>
+      <img src="/solar_sale-outline.svg" alt="세일" onClick={() => navigate('/onboarding/17')} />
+      <img src="/ion_person-outline.svg" alt="마이페이지" onClick={() => navigate('/onboarding/13')} />
+    </div>
+  </div>
+
+  <div className={styles.centerButton}>
+    <img src="/mdi_google-lens.svg" alt="렌즈" onClick={() => navigate('/onboarding/26')} />
+  </div>
+</div>
 
   );
 }

@@ -1,13 +1,23 @@
 import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
 
 interface UserState {
   name: string;
   profileImage: string;
-  setUser: (name: string, profileImage: string) => void;
+  setName: (name: string) => void;
+  setProfileImage: (image: string) => void;
 }
 
-export const useUserStore = create<UserState>((set) => ({
-  name: '',
-  profileImage: '/default-profile.png',
-  setUser: (name, profileImage) => set({ name, profileImage }),
-}));
+export const useUserStore = create<UserState>()(
+  persist(
+    (set) => ({
+      name: '',
+      profileImage: '',
+      setName: (name) => set({ name }),
+      setProfileImage: (image) => set({ profileImage: image }),
+    }),
+    {
+      name: 'user-storage', // localStorage key 이름
+    }
+  )
+);

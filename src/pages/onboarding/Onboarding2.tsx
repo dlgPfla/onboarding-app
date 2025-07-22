@@ -23,7 +23,7 @@ function Onboarding2() {
   };
 
   const isFormValid = selectedGender && birthDate && name;
-const setUser = useUserStore((state) => state.setUser);
+
   return (
     <div className={styles.container}>
       {/* 상단 헤더 */}
@@ -107,7 +107,7 @@ const setUser = useUserStore((state) => state.setUser);
       <button
   className={styles.submitBtn}
   onClick={() => {
-    setUser(name, profileImage);   // Zustand에 저장
+      // Zustand에 저장
     navigate('/onboarding/25');   // state 없이 이동해도 됨!
   }}
 >

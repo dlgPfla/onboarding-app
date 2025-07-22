@@ -71,6 +71,7 @@ padding-left: 40px;
   background-color: #ffffff;
   z-index: 10;
   padding: 0 4px;
+  
 }
 .backIcon {
   width: 24px;
@@ -80,7 +81,8 @@ padding-left: 40px;
 }
 .rightIcons {
   display: flex;
-  gap: 16px;
+  gap: 19px;
+  right: 15px;
 }
 .icon {
   width: 26px;

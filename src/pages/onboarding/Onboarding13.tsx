@@ -27,10 +27,14 @@ function Onboarding13() {
           </div>
 
           {/* 프로필 섹션 */}
-          <div className={styles.profileSection}>
-  <div className={styles.profileImg} />
+<div className={styles.profileSection}>
+  <img
+    src="/profile.png"
+    alt="프로필 이미지"
+    className={styles.profileImg}
+  />
   <div className={styles.profileRow}>
-    <div className={styles.profileName}>6개월 민하 </div>
+    <div className={styles.profileName}>6개월 민하</div>
     <button className={styles.editBtn}>프로필 편집</button>
   </div>
 </div>

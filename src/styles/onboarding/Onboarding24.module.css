@@ -1,0 +1,114 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+
+* {
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.scrollArea {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px 120px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  position: sticky;
+  margin-top: 24px;
+  background-color: #ffffff;
+  z-index: 10;
+  padding: 0 4px;
+}
+
+.backIcon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin-left: 14px;
+}
+
+.title {
+  color: #000;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  padding-left: 45px;
+}
+
+.rightIcons {
+  display: flex;
+  gap: 0px;
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  margin-right: 22px;
+}
+
+.bottomImage {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  object-fit: contain;
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  max-width: 430px;
+  margin: 0 auto;
+  overflow: hidden; /* ✅ 상위에서 넘침을 막고 */
+}
+
+
+.scrollArea {
+  flex: 1;
+  overflow-y: auto;   /* ✅ 세로 스크롤 활성화 */
+  overflow-x: hidden; /* 가로 스크롤 방지 */
+}
+
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.bottomImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.floatingBtn {
+  position: absolute;
+  bottom: 24px;      /* 이미지 하단에서 위로 24px */
+  right: 16px;       /* 우측 여백 */
+  padding: 6px 10px;
+  font-size: 14px;
+  background-color: #FFEBAF;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
