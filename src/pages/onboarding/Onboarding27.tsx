@@ -22,16 +22,20 @@ function Onboarding27() {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.content}>
-        <div className={styles.profileHeader}>
-          <img src={profileImage} alt="프로필" className={styles.profileImage} />
-          <span className={styles.profileName}>{name}</span>
-          <div className={styles.iconGroup}>
-            <img src="/meteor-icons_search.svg" alt="검색" />
-            <img src="/wish button.svg" alt="찜" />
-          </div>
+  <div className={styles.container}>
+    <div className={styles.content}>
+      <div className={styles.profileHeader}>
+        <img
+          src={profileImage || '/profile.png'}
+          alt="프로필"
+          className={styles.profileImage}
+        />
+        <span className={styles.profileName}>6개월차 민하</span> {/* ✅ 수정 */}
+        <div className={styles.iconGroup}>
+          <img src="/meteor-icons_search.svg" alt="검색" />
+          <img src="/wish button.svg" alt="찜" />
         </div>
+      </div>
 
         <div className={styles.tabMenu}>
           {tabs.map((tab) => (
